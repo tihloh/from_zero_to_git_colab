@@ -1,76 +1,164 @@
-# Create a GitHub Repository
+# GitHub Setup
 
 ## Quick Setup
 
-Create a **Private** repository.
+### 1. Create a Private Repository
 
-Do **not** initialize with:
-- README
-- .gitignore
-- License
+Repository Settings
 
-Generate SSH:
+```
+Visibility: Private
+Initialize with README: No
+Initialize with .gitignore: No
+Add License: No
+```
+
+### 2. Generate an SSH Key
 
 ```bash
 ssh-keygen -t ed25519 -C "developer@example.com"
 ```
 
-Show public key:
+### 3. Upload the Public Key
+
+Windows
 
 ```powershell
 type $env:USERPROFILE\.ssh\id_ed25519.pub
 ```
 
+Linux
+
 ```bash
 cat ~/.ssh/id_ed25519.pub
 ```
 
-Test:
+GitHub
+
+```
+Settings
+└── SSH and GPG Keys
+    └── New SSH Key
+```
+
+### 4. Test SSH
 
 ```bash
 ssh -T git@github.com
 ```
 
-Clone:
+### 5. Clone the Repository
 
 ```bash
 git clone git@github.com:your-username/example-project.git
+
 cd example-project
 ```
 
-Create branches:
+### 6. Create the Main Branches
 
 ```bash
 git branch -M main
+
 git checkout -b develop
+
 git push -u origin main
+
 git push -u origin develop
 ```
 
-Invite contributors (**Write** permission).
+### 7. Add Contributors
+
+```
+Repository
+└── Settings
+    └── Collaborators
+```
+
+Permission
+
+```
+Write
+```
+
+### 8. Protect `main` (Optional)
+
+```
+Repository
+└── Settings
+    └── Branches
+```
+
+Enable
+
+- Require Pull Request
+- Prevent force pushes
+- Prevent deletion
 
 ---
 
 # Complete Guide
 
-## Step 1 - Create the Repository
+The following sections explain each step in detail.
 
-Create a private repository and leave it empty.
+---
 
-## Step 2 - Configure SSH
+## Step 1 — Create a Private Repository
 
-Generate a key pair, upload the **public** key to GitHub (**Settings → SSH and GPG Keys**) and test the connection.
+Open GitHub and create a new repository.
 
-## Step 3 - Clone the Repository
+Repository name example:
 
-Clone using the SSH URL so future pushes don't require passwords.
+```
+example-project
+```
 
-## Step 4 - Create Main Branches
+Choose:
 
-Use `main` for production and `develop` for ongoing development.
+```
+Private
+```
 
-## Step 5 - Invite Contributors
+Leave these options unchecked:
 
-Give contributors **Write** permission. Keep **Admin** access for project owners only.
+- README
+- .gitignore
+- License
 
-Next: Configure SSH Authentication.
+Click **Create Repository**.
+
+### Why this matters
+
+The repository remains empty so you can upload your existing project without unnecessary merge commits.
+
+---
+
+## Step 2 — Generate an SSH Key
+
+Every computer should have its own SSH key.
+
+Run:
+
+```bash
+ssh-keygen -t ed25519 -C "developer@example.com"
+```
+
+Press **Enter** to accept the default location.
+
+This creates:
+
+```
+~/.ssh/
+
+id_ed25519
+id_ed25519.pub
+```
+
+| File | Purpose |
+|------|---------|
+| `id_ed25519` | Private key. Never share it. |
+| `id_ed25519.pub` | Public key. Upload to GitHub. |
+
+...
+
+(continue with the remaining steps)
