@@ -12,13 +12,13 @@ Follow the chapters in order when setting up the project for the first time. Aft
 
 For new developers setting up the project.
 
-1. [01 - Prerequisites](getting-started/01-prerequisites.md)
-2. [02 - Create a GitHub Repository](getting-started/02-create-a-github-repository.md)
-3. [03 - Configure SSH Authentication](getting-started/03-configure-ssh-authentication.md)
-4. [04 - Set Up Local Development](getting-started/04-set-up-local-development.md)
-5. [05 - Build the Docker Environment](getting-started/05-build-the-docker-environment.md)
-6. [06 - Configure Environment Variables](getting-started/06-configure-environment-variables.md)
-7. [07 - Install Composer Dependencies](getting-started/07-install-composer-dependencies.md)
+1. [01 - Prerequisites](01-getting-started/01-prerequisites.md)
+2. [02 - Create a GitHub Repository](01-getting-started/02-create-a-github-repository.md)
+3. [03 - Configure SSH Authentication](01-getting-started/03-configure-ssh-authentication.md)
+4. [04 - Set Up Local Development](01-getting-started/04-set-up-local-development.md)
+5. [05 - Build the Docker Environment](01-getting-started/05-build-the-docker-environment.md)
+6. [06 - Configure Environment Variables](01-getting-started/06-configure-environment-variables.md)
+7. [07 - Install Composer Dependencies](01-getting-started/07-install-composer-dependencies.md)
 
 ---
 
@@ -26,9 +26,9 @@ For new developers setting up the project.
 
 Daily development workflow.
 
-8. [08 - Work with Git](development/08-work-with-git.md)
+8. [08 - Work with Git](02-development/08-work-with-git.md)
 
-9. [09 - Collaborate with Other Developers](development/09-collaborate-with-other-developers.md)
+9. [09 - Collaborate with Other Developers](02-development/09-collaborate-with-other-developers.md)
 
 ---
 
@@ -36,9 +36,9 @@ Daily development workflow.
 
 Preparing and publishing production releases.
 
-10. [10 - Deploy to Production](deployment/10-deploy-to-production.md)
+10. [10 - Deploy to Production](03-deployment/10-deploy-to-production.md)
 
-11. [11 - Manage the Database](deployment/11-manage-the-database.md)
+11. [11 - Manage the Database](03-deployment/11-manage-the-database.md)
 
 ---
 
@@ -46,9 +46,9 @@ Preparing and publishing production releases.
 
 Maintaining and supporting the project.
 
-12. [12 - Secure the Project](maintenance/12-secure-the-project.md)
+12. [12 - Secure the Project](04-maintenance/12-secure-the-project.md)
 
-13. [13 - Troubleshoot Common Problems](maintenance/13-troubleshoot-common-problems.md)
+13. [13 - Troubleshoot Common Problems](04-maintenance/13-troubleshoot-common-problems.md)
 
 ---
 
